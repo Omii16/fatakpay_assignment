@@ -6,7 +6,7 @@ class Paths:
     def __init__(self, driver):
         self.driver = driver
 
-    enter_name = (By.XPATH, "//input[@class='form-control ng-dirty ng-invalid ng-touched']")
+    enter_name = (By.XPATH, "//div[@class='form-group']//input[@name='name']")
     saved_validation_msg = (By.XPATH, "//div[@class='alert alert-success alert-dismissible']")
     cancel_mark = (By.XPATH, "//a[normalize-space()='×']")
     name_validation = (By.XPATH, "//div[@class='alert alert-danger']")

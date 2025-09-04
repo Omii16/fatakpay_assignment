@@ -1,3 +1,4 @@
+import time
 import pytest
 
 from selenium import webdriver
@@ -23,7 +24,7 @@ def Invoke_Browser(request):
     driver = webdriver.Chrome(service=service_obj, options=options)
     time.sleep(1)
     driver.get("https://rahulshettyacademy.com/angularpractice/")
-    driver.implicitly_wait(50)
+    driver.implicitly_wait(5)
     driver.maximize_window()
     time.sleep(1)
     request.cls.driver = driver
