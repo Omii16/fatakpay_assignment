@@ -13,6 +13,3 @@ class Baseclass:
 
     def scroll_down(self, x, y):
         return self.driver.execute_script("window.scrollBy(arguments[0], arguments[1]);", x, y)
-
-    def scroll_up(self, x, y):
-        return self.driver.execute_script("window.scrollBy(arguments[0], arguments[1]);", x, y)
