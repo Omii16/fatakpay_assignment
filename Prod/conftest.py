@@ -1,4 +1,3 @@
-import time
 import pytest
 
 from selenium import webdriver
@@ -18,12 +17,11 @@ def Invoke_Browser(request):
     options.add_argument('ignore-certificate-errors')
     options.add_argument("--disable-application-cache")
     options.add_argument("--incognito")
-
     options.add_argument("--disable-features=Notification")
 
     service_obj = Service()
     driver = webdriver.Chrome(service=service_obj, options=options)
-    time.sleep(5)
+    time.sleep(1)
     driver.get("https://rahulshettyacademy.com/angularpractice/")
     driver.implicitly_wait(50)
     driver.maximize_window()
@@ -31,5 +29,4 @@ def Invoke_Browser(request):
     request.cls.driver = driver
     yield
     driver.quit()
-
 
